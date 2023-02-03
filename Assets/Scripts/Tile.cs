@@ -1,9 +1,10 @@
-﻿using UnityEngine;
+﻿using DefaultNamespace;
+using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
 
-public class Tile : MonoBehaviour, IPointerClickHandler
+public class Tile : MonoBehaviour, IPointerClickHandler, ITile
 {
     public int col;
     public int row;
