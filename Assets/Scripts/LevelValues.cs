@@ -5,4 +5,5 @@ public class LevelValues : ScriptableObject
 {
     public float healDecreasingSpeed;
     public float maxHealth;
+    public int itemsByLevel;
 }
