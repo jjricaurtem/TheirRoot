@@ -11,7 +11,10 @@ namespace DefaultNamespace
          */
         public LevelValues[] LevelValuesArray;
 
-        public bool isPaused;
+        /**
+         * When an animation is running we should avoid the gameplay to continua until it's finished
+         */
+        public bool isAnimating;
         /**
          * Event lunched every time a new level starts
          */
