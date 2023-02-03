@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10a5c2caf0e045b6b6cded92f24b9850, type: 3}
+  m_Name: LevelEvents
+  m_EditorClassIdentifier: 
+  LevelValuesArray:
+  - {fileID: 11400000, guid: feb87eb0c62ec6d4ab95420c5d390216, type: 2}
+  isGameplayEnable: 0
