@@ -4,6 +4,12 @@
 public class LevelValues : ScriptableObject
 {
     public float healDecreasingSpeed;
-    public float maxHealth;
-    public int itemsByLevel;
+    public float maxNutrition;
+    public float minNutrition;
+    public float initNutrition;
+    public float rootGenerationSpeed;
+    public AudioClip audioClip;
+    public int maxResources;
+    public int minResources;
+    public IAnimal animal;
 }
