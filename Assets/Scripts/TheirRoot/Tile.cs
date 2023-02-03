@@ -10,11 +10,9 @@ namespace TheirRoot
         public TileMap tileMap;
         public int status;
         public TileEvents tileEvents;
-        private SpriteRenderer _spriteRenderer;
 
         private void Awake()
         {
-            _spriteRenderer = GetComponent<SpriteRenderer>();
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -28,7 +26,6 @@ namespace TheirRoot
         {
             if (status == newStatus) return;
             status = newStatus;
-            _spriteRenderer.color = status == 0 ? Color.white : Color.red;
             Debug.Log($"Clicked on hex {name}");
         }
 
