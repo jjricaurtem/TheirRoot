@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8100724921018496259}
+  - component: {fileID: 93447657383637080}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -32,6 +33,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &93447657383637080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100724921018496268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66808793aa8143959a9da1d9d02524a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelValues: {fileID: 11400000, guid: feb87eb0c62ec6d4ab95420c5d390216, type: 2}
+  levelEvents: {fileID: 11400000, guid: d546a09478c7dd74bb2012f2d886701f, type: 2}
+  myRender: {fileID: 2657627298637669448}
 --- !u!1001 &3684046008252070092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89,6 +105,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fb02fa0140893f41951cdebc5bc2d5e, type: 3}
+--- !u!23 &2657627298637669448 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 2fb02fa0140893f41951cdebc5bc2d5e, type: 3}
+  m_PrefabInstance: {fileID: 3684046008252070092}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3795097622359973671 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2fb02fa0140893f41951cdebc5bc2d5e, type: 3}
