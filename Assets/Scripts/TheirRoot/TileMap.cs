@@ -11,6 +11,7 @@ namespace TheirRoot
 
         public void buildTileMap()
         {
+            //_hexMatrix[1][0] = null;
             var parentPosition = transform.position;
             var bottomDownCorner =
                 new Vector3(parentPosition.x + 0.5f - rows / 2f, 0, parentPosition.z + 0.5f - cols / 2f);
