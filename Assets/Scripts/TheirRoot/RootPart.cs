@@ -12,9 +12,11 @@ namespace TheirRoot
         public SpriteRenderer myRootSpriteRenderer;
         public Animator animator;
         public AudioClip rootChangeSound;
+        private AudioSource _audioSource;
         public void Start()
         {
             if (myRootSpriteRenderer == null) TryGetComponent(out myRootSpriteRenderer);
+            if (_audioSource == null) TryGetComponent(out _audioSource);
             if (animator == null) TryGetComponent(out animator);
             animator.SetTrigger("Idle");
         }
@@ -25,7 +27,7 @@ namespace TheirRoot
         
        public void RootDropSound()
        {
-            MainMusicEventChannel.rootChangeMuisic.Invoke(rootChangeSound);
-       }
+            _audioSource.Play();
+        }
     }
 }
