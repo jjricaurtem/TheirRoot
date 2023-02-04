@@ -9,7 +9,6 @@ namespace TheirRoot
         [SerializeField] private LevelEvents levelEvents;
         [SerializeField] private GameObject uiFinalMessagePanel;
         [SerializeField] private TMP_Text levelText;
-        private int _currentLevel = 1;
 
         private void Awake()
         {
@@ -17,10 +16,9 @@ namespace TheirRoot
             levelEvents.StartNewLevel += StartNewLevel;
         }
 
-        private void StartNewLevel(LevelValues levelValues, int levelNumber)
+        private void StartNewLevel()
         {
-            _currentLevel = levelNumber;
-            levelText.text = $"Level: {levelNumber}";
+            levelText.text = $"Level: {levelEvents.currentLevel}";
         }
 
         private void Start()
