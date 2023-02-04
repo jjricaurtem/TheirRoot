@@ -7,5 +7,6 @@ namespace TheirRoot
     public class MainMusicEventChannel : ScriptableObject
     {
         public UnityAction<AudioClip> onChangeMusic;
+        public UnityAction<AudioClip> rootChangeMuisic;
     }
 }

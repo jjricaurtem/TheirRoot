@@ -6,16 +6,26 @@ namespace TheirRoot
 {
     public class RootPart : MonoBehaviour, IItem
     {
-        // Start is called before the first frame update
-        void Start()
+        public MainMusicEventChannel MainMusicEventChannel;
+        public RootPartJoins RootPartJoin;
+        public Renderer myRootRender;
+        public SpriteRenderer myRootSpriteRenderer;
+        public Animator animator;
+        public AudioClip rootChangeSound;
+        public void Start()
         {
-
+            if (myRootSpriteRenderer == null) TryGetComponent(out myRootSpriteRenderer);
+            if (animator == null) TryGetComponent(out animator);
+            animator.SetTrigger("Idle");
         }
-
-        // Update is called once per frame
-        void Update()
+        public void RootChangeAnimation()
         {
-
+            animator.SetTrigger("ChangeRoot");
         }
+        
+       public void RootDropSound()
+       {
+            MainMusicEventChannel.rootChangeMuisic.Invoke(rootChangeSound);
+       }
     }
 }

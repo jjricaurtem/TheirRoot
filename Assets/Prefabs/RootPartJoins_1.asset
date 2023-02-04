@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 462edcec5c868e8488d33eb89c1adc0f, type: 3}
   m_Name: RootPartJoins_1
   m_EditorClassIdentifier: 
-  NE: 0
+  NE: 1
   NW: 0
   E: 0
   SE: 0
   SW: 0
-  W: 0
+  W: 1
