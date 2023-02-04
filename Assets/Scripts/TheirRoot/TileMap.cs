@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace TheirRoot
@@ -9,7 +11,40 @@ namespace TheirRoot
         public int cols = 8;
         public Tile[][] HexMatrix { get; private set; }
 
-        public void buildTileMap()
+        public void RebuildTileMap()
+        {
+            // Clear
+            for (var rowNum = 0; rowNum < rows; rowNum++)
+            {
+                for (var colNum = 0; colNum < cols; colNum++)
+                {
+                    Destroy(HexMatrix[rowNum][colNum]);
+                }
+            }
+
+            BuildTileMap();
+        }
+
+        public Dictionary<Direction, Tile> GetNeighbours(Tile tile)
+        {
+            var neighbours = new Dictionary<Direction, Tile>();
+            foreach (Direction direction in Enum.GetValues(typeof(Direction)))
+            {
+                var offset = DirectionValues.GetOffSet(direction);
+                var neighbourRow = tile.row + offset[0];
+                var neighbourCol = tile.col + offset[1];
+
+                if(neighbourRow < 0 || neighbourRow >= rows ) continue;
+                if(neighbourCol < 0 || neighbourCol >= cols ) continue;
+
+                var neighbourTile = HexMatrix[neighbourRow][neighbourCol];
+                neighbours.Add(direction, neighbourTile);
+            }
+
+            return neighbours;
+        }
+
+        public void BuildTileMap()
         {
             var parentPosition = transform.position;
             var bottomDownCorner =

@@ -12,7 +12,7 @@ namespace Scripts.Editor
             var tileMap = (TileMap)target;
             DrawDefaultInspector();
 
-            if (GUILayout.Button("Build Map")) tileMap.buildTileMap();
+            if (GUILayout.Button("Build Map")) tileMap.BuildTileMap();
         }
     }
 }
