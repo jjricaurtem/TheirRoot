@@ -6,6 +6,8 @@ namespace TheirRoot
     [CreateAssetMenu(fileName = "LevelEvents", menuName = "TheirRoot/LevelEvents", order = 0)]
     public class LevelEvents : ScriptableObject
     {
+        public int currentLevel;
+
         /**
         * Array with the level values that change the difficult level-by-level
         */
@@ -24,6 +26,8 @@ namespace TheirRoot
         /**
         * Event lunched every time a new level starts
         */
-        public UnityAction<LevelValues, int> StartNewLevel;
+        public UnityAction StartNewLevel;
+        
+ 
     }
 }
