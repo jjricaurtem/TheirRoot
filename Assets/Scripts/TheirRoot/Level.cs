@@ -11,23 +11,12 @@ namespace TheirRoot
         [SerializeField] private float movementSpeed;
         [SerializeField] private LevelEvents levelEvents;
         [SerializeField] private TileMap tilemap;
-        [SerializeField] private GameObject uiFinalMessagePanel;
         private readonly int _level = 1;
-
-        private void Awake() => levelEvents.EndGame += EndGame;
 
         private void Start()
         {
             levelEvents.isGameplayEnable = false;
-            uiFinalMessagePanel.SetActive(false);
             StartCoroutine(MoveLevelUp());
-        }
-
-        private void OnDestroy() => levelEvents.EndGame -= EndGame;
-
-        private void EndGame()
-        {
-            uiFinalMessagePanel.SetActive(true);
         }
 
         private IEnumerator MoveLevelUp()
@@ -44,7 +33,5 @@ namespace TheirRoot
             tilemap.buildTileMap();
             levelEvents.isGameplayEnable = true;
         }
-
-        public void Restart() => SceneManager.LoadScene("GameScene");
     }
 }

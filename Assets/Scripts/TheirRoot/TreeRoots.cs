@@ -15,10 +15,57 @@ namespace TheirRoot
     {
         public LevelValues levelValues;
         public LevelEvents levelEvents;
-        private float _health;
+        float _health;
+        Renderer myRender;
+        int indexlevel=1;
 
+
+        private void Start()
+        {           
+            _health = levelValues.initNutrition;
+            TryGetComponent(out myRender);
+        
+        }
+
+        public void Update()
+        {        
+
+            DecreasingHealthyByTime();
+            ModifyTreeMaterial();
+            Debug.Log(_health+" "+myRender.material.color);
+        }
         public void DecreasingHealthyByTime()
         {
+            if (_health>=levelValues.minNutrition)
+            {
+                _health -= Time.deltaTime * levelValues.healDecreasingSpeed;
+            }
+            else{ 
+            //levelEvents.LevelLose();//leveUI
+            }
+        }
+
+        public void ModifyTreeMaterial()
+        {
+            //y=ax+b for normalized values
+            var m = (levelValues.maxNutrition - levelValues.minNutrition) / (1 - 0);
+            var b = levelValues.maxNutrition - m;
+
+            var normalValue = _health*m + b;
+
+            var targetColor = Color.HSVToRGB(normalValue,normalValue,normalValue);
+            myRender.material.color = Color.Lerp(myRender.material.color, targetColor, Time.deltaTime);//revisar
+        }
+
+        public void increaseHealth(int addHealth)
+        {
+            _health += addHealth;
+            if (_health >= levelValues.maxNutrition)
+            {
+                indexlevel++;
+                levelEvents.cuerrenteLevel++;
+                levelEvents.StartNewLevel?.Invoke();
+            }
         }
     }
 }

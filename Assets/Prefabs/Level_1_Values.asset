@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac3472ec80f4af2828230f111ffc569, type: 3}
   m_Name: Level_1_Values
   m_EditorClassIdentifier: 
-  healDecreasingSpeed: 0.01
+  healDecreasingSpeed: 0.0001
   maxNutrition: 6
   minNutrition: 0
   initNutrition: 3
