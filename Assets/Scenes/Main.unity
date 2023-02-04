@@ -219,7 +219,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: -94.427, y: 0, z: 0}
 --- !u!1 &258735919
 GameObject:
@@ -251,7 +251,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 9.087, y: 0, z: 0}
 --- !u!212 &258735924
 SpriteRenderer:
@@ -366,7 +366,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &759772232
 GameObject:
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 2ebf6eb53cd7e4a659866600d953554b, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 2ebf6eb53cd7e4a659866600d953554b, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 2ebf6eb53cd7e4a659866600d953554b, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -543,8 +543,65 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &907404638
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9019942076722641004, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_Name
+      value: MainMusicAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9759476
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.2180051
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019942076722641007, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7db05035da8e4554ba2f4801dccdd71d, type: 3}
 --- !u!1 &917615210
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +684,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &932471264
 GameObject:
@@ -695,7 +752,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1026155917
 GameObject:
@@ -767,7 +824,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 805048d1c7c9941f2bea5faba5055719, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 805048d1c7c9941f2bea5faba5055719, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 805048d1c7c9941f2bea5faba5055719, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -900,7 +957,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 8553337c1e772474bbff49c5e6d0c962, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 8553337c1e772474bbff49c5e6d0c962, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 8553337c1e772474bbff49c5e6d0c962, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1058,7 +1115,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -9.817, y: 0, z: 0}
 --- !u!1 &1727325699
 GameObject:
@@ -1173,7 +1230,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 148.791, y: -148.323, z: -120.856}
 --- !u!1 &1812659080
 GameObject:
@@ -1273,7 +1330,7 @@ RectTransform:
   - {fileID: 1213407370}
   - {fileID: 2023480609}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1350,7 +1407,7 @@ MonoBehaviour:
   m_SpriteState:
     m_HighlightedSprite: {fileID: 21300000, guid: 06c6d84598ea641dbbd6988490900be7, type: 3}
     m_PressedSprite: {fileID: 21300000, guid: 06c6d84598ea641dbbd6988490900be7, type: 3}
-    m_SelectedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 21300000, guid: 06c6d84598ea641dbbd6988490900be7, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
