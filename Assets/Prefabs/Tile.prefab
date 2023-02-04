@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3800846521407177609}
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 5258141664147723794}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 270, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &8811125095717983016
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3800846521407177609}
-  m_Mesh: {fileID: -462981019419857548, guid: f3ab9d1c9fd28044d84e6966a4ed60d7, type: 3}
+  m_Mesh: {fileID: -2094238020915426420, guid: f3ab9d1c9fd28044d84e6966a4ed60d7, type: 3}
 --- !u!23 &7582878787465018518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0201359ff4527cd4796ab3242e15a679, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   tileMap: {fileID: 0}
   status: 0
   tileEvents: {fileID: 11400000, guid: 12d799055a2a50f4d922022ed49cbc47, type: 2}
+  tileVisualGo: {fileID: 7404936354158248674}
 --- !u!64 &7752070685555348442
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -114,9 +115,9 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: -462981019419857548, guid: f3ab9d1c9fd28044d84e6966a4ed60d7, type: 3}
+  m_Mesh: {fileID: -2094238020915426420, guid: f3ab9d1c9fd28044d84e6966a4ed60d7, type: 3}
 --- !u!1 &7404936354158248674
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5258141664147723794
 Transform:
   m_ObjectHideFlags: 0
@@ -190,8 +191,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: b670ab75dde984907b8570040daa08c5, type: 3}
-  m_Color: {r: 0.4292453, g: 1, b: 0.9337981, a: 0.15686275}
+  m_Sprite: {fileID: 21300000, guid: 0eb7495e37fcf574c961203bdc82169f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

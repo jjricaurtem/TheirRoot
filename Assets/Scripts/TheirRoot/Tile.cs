@@ -3,22 +3,21 @@ using UnityEngine.EventSystems;
 
 namespace TheirRoot
 {
-    public class Tile : MonoBehaviour, IPointerClickHandler
+    public class Tile : MonoBehaviour, IPointerClickHandler, IPointerUpHandler
     {
         public int col;
         public int row;
         public TileMap tileMap;
         public int status;
         public TileEvents tileEvents;
+        [SerializeField] private GameObject tileVisualGo;
+        public IItem Item { get; set; }
 
-        private void Awake()
-        {
-        }
 
         public void OnPointerClick(PointerEventData eventData)
         {
             var newStatus = status == 0 ? 1 : 0;
-            tileEvents.StatusChange?.Invoke(newStatus);
+            tileEvents.OnTileClick?.Invoke(this);
             SetStatus(newStatus);
         }
 
@@ -35,6 +34,13 @@ namespace TheirRoot
             row = rowNum;
             col = colNum;
             tileMap = parentTileMap;
+        }
+
+        public void ToggleVisualHex() => tileVisualGo.SetActive(!tileVisualGo.activeSelf);
+
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            tileEvents.OnTileHover?.Invoke(this);
         }
     }
 }
