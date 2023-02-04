@@ -16,7 +16,7 @@ namespace TheirRoot
         public LevelValues levelValues;
         public LevelEvents levelEvents;
         float _health;
-        Renderer myRender;
+        public Renderer myRender;
         int indexlevel=1;
 
 
@@ -28,8 +28,7 @@ namespace TheirRoot
         }
 
         public void Update()
-        {        
-
+        {       
             DecreasingHealthyByTime();
             ModifyTreeMaterial();
             Debug.Log(_health+" "+myRender.material.color);
@@ -47,14 +46,14 @@ namespace TheirRoot
 
         public void ModifyTreeMaterial()
         {
-            //y=ax+b for normalized values
-            var m = (levelValues.maxNutrition - levelValues.minNutrition) / (1 - 0);
-            var b = levelValues.maxNutrition - m;
+            //y=mx+b for normalized values
+            var m = (0.8f - 0.2f) / (levelValues.maxNutrition - levelValues.minNutrition);
+            var b = 0.8f-levelValues.maxNutrition*m;
 
             var normalValue = _health*m + b;
 
             var targetColor = Color.HSVToRGB(normalValue,normalValue,normalValue);
-            myRender.material.color = Color.Lerp(myRender.material.color, targetColor, Time.deltaTime);//revisar
+            myRender.material.color = Color.Lerp(myRender.material.color, targetColor, Time.deltaTime/(_health-levelValues.minNutrition));
         }
 
         public void increaseHealth(int addHealth)
@@ -63,7 +62,7 @@ namespace TheirRoot
             if (_health >= levelValues.maxNutrition)
             {
                 indexlevel++;
-                levelEvents.cuerrenteLevel++;
+                levelEvents.currentLevel++;
                 levelEvents.StartNewLevel?.Invoke();
             }
         }

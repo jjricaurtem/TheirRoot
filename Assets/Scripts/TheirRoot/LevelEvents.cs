@@ -6,7 +6,7 @@ namespace TheirRoot
     [CreateAssetMenu(fileName = "LevelEvents", menuName = "TheirRoot/LevelEvents", order = 0)]
     public class LevelEvents : ScriptableObject
     {
-        public int cuerrenteLevel;
+        public int currentLevel;
 
         /**
         * Array with the level values that change the difficult level-by-level
