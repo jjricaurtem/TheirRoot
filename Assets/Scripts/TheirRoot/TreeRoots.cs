@@ -17,6 +17,7 @@ namespace TheirRoot
 
         public void Update()
         {
+            if (!levelEvents.isGameplayEnable) return;
             DecreasingHealthyByTime();
             ModifyTreeMaterial();
         }
