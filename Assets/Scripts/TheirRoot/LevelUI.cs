@@ -18,7 +18,7 @@ namespace TheirRoot
 
         private void StartNewLevel()
         {
-            levelText.text = $"Level: {levelEvents.cuerrenteLevel}";
+            levelText.text = $"Level: {levelEvents.currentLevel}";
         }
 
         private void Start()
