@@ -7,7 +7,7 @@ namespace TheirRoot
         public Tile tilePrefab;
         public int rows = 8;
         public int cols = 8;
-        private readonly Tile[][] _hexMatrix = new Tile[20][];
+        public Tile[][] HexMatrix { get; } = new Tile[20][];
 
         public void buildTileMap()
         {
@@ -20,7 +20,7 @@ namespace TheirRoot
             var evenRow = true;
             for (var rowNum = 0; rowNum < rows; rowNum++)
             {
-                _hexMatrix[rowNum] = new Tile[cols];
+                HexMatrix[rowNum] = new Tile[cols];
                 var rowStyle = evenRow ? evenRowStyle : oddRowStyle;
                 for (var colNum = 0; colNum < cols; colNum++)
                 {
@@ -28,7 +28,7 @@ namespace TheirRoot
                     hex.transform.localPosition = new Vector3(bottomDownCorner.x + colNum + rowStyle.x,
                         0, bottomDownCorner.z + rowNum + rowStyle.z);
                     hex.Initialize(rowNum, colNum, this);
-                    _hexMatrix[rowNum][colNum] = hex;
+                    HexMatrix[rowNum][colNum] = hex;
                 }
 
                 evenRow = !evenRow;
