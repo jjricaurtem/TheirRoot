@@ -12,7 +12,7 @@ namespace TheirRoot
         private RootPartSo _rootPartSo;
         public bool IsEmpty { get; private set; } = true;
 
-        private void Start()
+        private void Awake()
         {
             _image = GetComponent<Image>();
             _emptyImage = _image.sprite;

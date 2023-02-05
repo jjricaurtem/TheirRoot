@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64681f1008fe4b60a2578b6da5a92c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileMap: {fileID: 0}
+  tileMap: {fileID: 1158231319}
 --- !u!224 &865589051 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3392612073378730455, guid: 041a0b524f05ad647beda0bd4819465c, type: 3}
@@ -681,7 +681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64681f1008fe4b60a2578b6da5a92c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileMap: {fileID: 0}
+  tileMap: {fileID: 1158231319}
 --- !u!1 &1443449360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1405,10 @@ PrefabInstance:
       propertyPath: tileImages.Array.data[1]
       value: 
       objectReference: {fileID: 1436338493}
+    - target: {fileID: 3392612073378730450, guid: 041a0b524f05ad647beda0bd4819465c, type: 3}
+      propertyPath: allRootPartsSo.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3392612073378730454, guid: 041a0b524f05ad647beda0bd4819465c, type: 3}
       propertyPath: m_Name
       value: TileQueue
