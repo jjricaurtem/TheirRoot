@@ -15,6 +15,21 @@ namespace TheirRoot
 
     public abstract class DirectionValues
     {
+
+        public static Direction GetInverseDirection(Direction direction)
+        {
+            return direction switch
+            {
+                Direction.NorthWest => Direction.SouthEast,
+                Direction.NorthEast => Direction.SouthWest,
+                Direction.East => Direction.West,
+                Direction.SouthEast => Direction.NorthWest,
+                Direction.SouthWest => Direction.NorthEast,
+                Direction.West => Direction.East,
+                _ => throw new ArgumentOutOfRangeException(nameof(direction), direction, null)
+            };
+        }
+        
         public static int[] GetOffSet(Direction direction)
         {
             return direction switch

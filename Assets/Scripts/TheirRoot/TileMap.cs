@@ -10,6 +10,7 @@ namespace TheirRoot
         public int rows = 8;
         public int cols = 8;
         public RootPart initialRootPartPrefab;
+        public RootPart Root {get; private set; }
         public Tile[][] HexMatrix { get; private set; }
 
         public void RebuildTileMap()
@@ -80,6 +81,15 @@ namespace TheirRoot
             startTile.Item = rootPart;
             rootPart.transform.localRotation = Quaternion.identity;
             rootPart.currentTile = startTile;
+            Root = rootPart;
+        }
+
+        private Dictionary<Tile, Tile> GetPossibleTiles(RootPartSo rootPartSo)
+        {
+            // obtener las posibles direcciones de la entrada
+            // invertir las direcciones
+            // recursivamente hacer una traza desde la ráiz origen para ver quien puede ser padre de alguna de las direcciones
+            return null;
         }
     }
 }
