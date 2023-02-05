@@ -295,6 +295,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376663955}
   m_CullTransparentMesh: 1
+--- !u!114 &497309257 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8331001779734718194, guid: a4c0de2f0e0adfc4c901f6463a9f84a7, type: 3}
+  m_PrefabInstance: {fileID: 8331001780408695016}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &561669324 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3392612073079661088, guid: 041a0b524f05ad647beda0bd4819465c, type: 3}
@@ -1847,6 +1858,7 @@ MonoBehaviour:
   levelEvents: {fileID: 11400000, guid: d546a09478c7dd74bb2012f2d886701f, type: 2}
   uiFinalMessagePanel: {fileID: 202554018}
   levelText: {fileID: 1730563495}
+  restartButton: {fileID: 497309257}
 --- !u!1001 &9019942076198887377
 PrefabInstance:
   m_ObjectHideFlags: 0
