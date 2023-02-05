@@ -17,6 +17,7 @@ namespace TheirRoot
 
         public void Update()
         {
+            if (!levelEvents.isGameplayEnable) return;
             DecreasingHealthyByTime();
             ModifyTreeMaterial();
         }
@@ -47,6 +48,7 @@ namespace TheirRoot
 
             levelEvents.currentLevel++;
             levelEvents.StartNewLevel?.Invoke();
-        }
+        }     
+
     }
 }
