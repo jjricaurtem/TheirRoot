@@ -27,7 +27,11 @@ namespace TheirRoot
             }
             else if (eventData.button == PointerEventData.InputButton.Left)
             {
-                
+                var possibleTiles =  tileMap.GetPossibleTiles(_rootPartSo);
+                foreach (var possibleTile in possibleTiles)
+                {
+                    possibleTile.Value.ToggleVisualHex();
+                }
             }
         }
 
