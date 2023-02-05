@@ -47,3 +47,4 @@ MonoBehaviour:
   tilePrefab: {fileID: 7324725385113255061, guid: bd4fda168dec13f449acb8194f5956db, type: 3}
   rows: 9
   cols: 9
+  initialRootPartPrefab: {fileID: 1608712458375167318, guid: c3b8900384752884bad84328705434be, type: 3}

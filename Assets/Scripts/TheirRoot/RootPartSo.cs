@@ -7,5 +7,6 @@ namespace TheirRoot
     {
         public bool NE, NW, E, SE, SW, W;
         public Sprite rootSprite;
+        public RootPart rootPartPrefab;
     }
 }

@@ -9,7 +9,7 @@ namespace TheirRoot
         public float maxNutrition;
         public float minNutrition;
         public float initNutrition;
-        public float rootGenerationSpeed;
+        public int rootGenerationSpeed;
         public AudioClip audioClip;
         public int maxResources;
         public int minResources;
