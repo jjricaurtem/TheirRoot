@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace TheirRoot
 {
@@ -12,21 +9,30 @@ namespace TheirRoot
         public SpriteRenderer myRootSpriteRenderer;
         public Animator animator;
         private AudioSource _audioSource;
+
         public void Start()
         {
             if (myRootSpriteRenderer == null) TryGetComponent(out myRootSpriteRenderer);
             if (_audioSource == null) TryGetComponent(out _audioSource);
             if (animator == null) TryGetComponent(out animator);
-            animator.SetTrigger("Idle");
+            // animator.SetTrigger("Idle");
+
+            if (rootPartSo is not null) myRootSpriteRenderer.sprite = rootPartSo.rootSprite;
         }
+
         public void RootChangeAnimation()
         {
             animator.SetTrigger("ChangeRoot");
         }
-        
-       public void RootDropSound()
-       {
+
+        public void RootDropSound()
+        {
             _audioSource.Play();
+        }
+
+        public void RootRemovedAnimationComplete()
+        {
+            Debug.Log("Animation Ends");
         }
     }
 }

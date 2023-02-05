@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac3472ec80f4af2828230f111ffc569, type: 3}
   m_Name: Level_1_Values
   m_EditorClassIdentifier: 
-  healDecreasingSpeed: 0.0001
+  healDecreasingSpeed: 0.05
   maxNutrition: 6
   minNutrition: 0
   initNutrition: 3
-  rootGenerationSpeed: 1
+  rootGenerationSpeed: 15
   audioClip: {fileID: 8300000, guid: 5059b08e7a889be44acfb99dcad4a031, type: 3}
   maxResources: 20
   minResources: 10

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace TheirRoot
 {
@@ -7,11 +8,13 @@ namespace TheirRoot
         public LevelValues levelValues;
         public LevelEvents levelEvents;
         public Renderer myRender;
+        public Slider slider;
         private float _health;
 
         private void Start()
         {
             _health = levelValues.initNutrition;
+            UpdateHealBarUi();
             if (myRender == null) TryGetComponent(out myRender);
         }
 
@@ -20,6 +23,14 @@ namespace TheirRoot
             if (!levelEvents.isGameplayEnable) return;
             DecreasingHealthyByTime();
             ModifyTreeMaterial();
+            UpdateHealBarUi();
+        }
+
+        private void UpdateHealBarUi()
+        {
+            slider.maxValue = levelValues.maxNutrition;
+            slider.minValue = levelValues.minNutrition;
+            slider.value = _health;
         }
 
         private void DecreasingHealthyByTime()
@@ -48,7 +59,6 @@ namespace TheirRoot
 
             levelEvents.currentLevel++;
             levelEvents.StartNewLevel?.Invoke();
-        }     
-
+        }
     }
 }

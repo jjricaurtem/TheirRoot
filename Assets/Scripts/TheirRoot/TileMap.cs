@@ -9,6 +9,7 @@ namespace TheirRoot
         public Tile tilePrefab;
         public int rows = 8;
         public int cols = 8;
+        public RootPart initialRootPartPrefab;
         public Tile[][] HexMatrix { get; private set; }
 
         public void RebuildTileMap()
@@ -68,6 +69,17 @@ namespace TheirRoot
 
                 evenRow = !evenRow;
             }
+
+            AddFirstRoot();
+        }
+
+        private void AddFirstRoot()
+        {
+            var startTile = HexMatrix[0][0];
+            var rootPart = Instantiate(initialRootPartPrefab, startTile.transform);
+            startTile.Item = rootPart;
+            rootPart.transform.localRotation = Quaternion.identity;
+            rootPart.currentTile = startTile;
         }
     }
 }
