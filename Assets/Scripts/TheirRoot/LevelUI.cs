@@ -1,6 +1,8 @@
 ﻿using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 namespace TheirRoot
 {
@@ -9,11 +11,13 @@ namespace TheirRoot
         [SerializeField] private LevelEvents levelEvents;
         [SerializeField] private GameObject uiFinalMessagePanel;
         [SerializeField] private TMP_Text levelText;
+        [SerializeField] private Button restartButton;
 
         private void Awake()
         {
             levelEvents.EndGame += EndGame;
             levelEvents.StartNewLevel += StartNewLevel;
+            restartButton.onClick.AddListener(Restart);
         }
 
         private void StartNewLevel()
@@ -35,6 +39,7 @@ namespace TheirRoot
         private void EndGame()
         {
             uiFinalMessagePanel.SetActive(true);
+            
         }
 
         public void Restart() => SceneManager.LoadScene("GameScene");
