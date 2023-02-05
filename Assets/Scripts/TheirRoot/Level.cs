@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +12,11 @@ namespace TheirRoot
         [SerializeField] private float movementSpeed;
         [SerializeField] private LevelEvents levelEvents;
         [SerializeField] private TileMap tilemap;
-        private readonly int _level = 1;
+
+        private void Awake()
+        {
+            levelEvents.currentLevel = 1;
+        }
 
         private void Start()
         {
@@ -21,7 +26,7 @@ namespace TheirRoot
 
         private IEnumerator MoveLevelUp()
         {
-            var targetPosition = levels.transform.position.y + 8f * _level;
+            var targetPosition = levels.transform.position.y + 8f * levelEvents.currentLevel;
             while (levels.transform.position.y < targetPosition)
             {
                 var nextPosition = levels.transform.position;
@@ -30,7 +35,7 @@ namespace TheirRoot
                 yield return null;
             }
 
-            tilemap.buildTileMap();
+            tilemap.BuildTileMap();
             levelEvents.isGameplayEnable = true;
         }
     }
