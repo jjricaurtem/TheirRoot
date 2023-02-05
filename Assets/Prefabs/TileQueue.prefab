@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 3392612073049795995}
   - component: {fileID: 3392612073049795989}
   - component: {fileID: 3392612073049795988}
+  - component: {fileID: 657632122}
   m_Layer: 5
   m_Name: Tile1
   m_TagString: Untagged
@@ -162,19 +163,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3392612073049795994}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3392612073378730455}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -17.64, y: -14.6}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 8.140015}
+  m_SizeDelta: {x: 87.10938, y: 100.3906}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &3392612073049795989
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -213,6 +214,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &657632122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392612073049795994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64681f1008fe4b60a2578b6da5a92c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileMap: {fileID: 0}
+  tileEvents: {fileID: 11400000, guid: 12d799055a2a50f4d922022ed49cbc47, type: 2}
+  rootPartPrefab: {fileID: 1608712458375167318, guid: c3b8900384752884bad84328705434be, type: 3}
 --- !u!1 &3392612073079661094
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,10 +463,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 367460dce1f665849b5859ef3d44e3d2, type: 2}
   - {fileID: 11400000, guid: de5efd800cdf4ce49b736cbcab90b494, type: 2}
   - {fileID: 11400000, guid: a85e84a3b0e00774e9e14387bc691abd, type: 2}
-  - {fileID: 11400000, guid: a42ee931ccb6a8d47ae2ed429aff2634, type: 2}
-  nextRootPartSprite: {fileID: 3392612073595553689}
-  tile1Sprite: {fileID: 3392612073049795988}
-  tile2Sprite: {fileID: 3392612073815658449}
+  nextRootPartImage: {fileID: 3392612073595553689}
+  availableTile1: {fileID: 657632122}
+  availableTile2: {fileID: 1436338495}
+  countDownText: {fileID: 3392612073079661088}
   levelEvents: {fileID: 11400000, guid: d546a09478c7dd74bb2012f2d886701f, type: 2}
 --- !u!1 &3392612073595553695
 GameObject:
@@ -539,6 +555,7 @@ GameObject:
   - component: {fileID: 3392612073815658448}
   - component: {fileID: 3392612073815658450}
   - component: {fileID: 3392612073815658449}
+  - component: {fileID: 1436338495}
   m_Layer: 5
   m_Name: Tile2
   m_TagString: Untagged
@@ -553,19 +570,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3392612073815658455}
-  m_LocalRotation: {x: 0, y: 0, z: 0.2588191, w: 0.9659258}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3392612073378730455}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 30}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -17.64, y: 89.6}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 124.69}
+  m_SizeDelta: {x: 87.10938, y: 100.3906}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &3392612073815658450
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -604,3 +621,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1436338495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3392612073815658455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64681f1008fe4b60a2578b6da5a92c49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileMap: {fileID: 0}
+  tileEvents: {fileID: 11400000, guid: 12d799055a2a50f4d922022ed49cbc47, type: 2}
+  rootPartPrefab: {fileID: 1608712458375167318, guid: c3b8900384752884bad84328705434be, type: 3}
