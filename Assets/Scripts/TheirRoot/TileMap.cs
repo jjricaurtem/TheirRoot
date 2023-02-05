@@ -84,11 +84,13 @@ namespace TheirRoot
             Root = rootPart;
         }
 
-        private Dictionary<Tile, Tile> GetPossibleTiles(RootPartSo rootPartSo)
+        private List<Dictionary<Tile, Tile>> GetPossibleTiles(RootPartSo rootPartSo)
         {
+            var results = new List<Dictionary<Tile, Tile>>();
             // obtener las posibles direcciones de la entrada
             // invertir las direcciones
             // recursivamente hacer una traza desde la ráiz origen para ver quien puede ser padre de alguna de las direcciones
+            // agregar a results el listado de tile_padre, tile_hijo con los posible puntos donde es viable colocar la rama
             return null;
         }
     }
