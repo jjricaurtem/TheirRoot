@@ -24,7 +24,7 @@ namespace TheirRoot
         public UnityAction EndGame;
 
         /**
-        * Event lunched every time a new level starts
+        * Event launched every time a new level starts
         */
         public UnityAction StartNewLevel;
         
