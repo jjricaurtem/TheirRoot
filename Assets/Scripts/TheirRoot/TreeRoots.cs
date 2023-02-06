@@ -48,8 +48,8 @@ namespace TheirRoot
             var normalValue = _health * m + b;
 
             var targetColor = Color.HSVToRGB(normalValue, normalValue, normalValue);
-            myRender.material.color = Color.Lerp(myRender.material.color, targetColor,
-                Time.deltaTime / (_health - levelValues.minNutrition));
+            // myRender.material.color = Color.Lerp(myRender.material.color, targetColor,
+            //     Time.deltaTime / (_health - levelValues.minNutrition));
         }
 
         public void IncreaseHealth(int addHealth)
