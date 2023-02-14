@@ -46,6 +46,8 @@ namespace TheirRoot
                     else if (availableTile2.IsEmpty) availableTile2.FillTile(_nextRootPartSo);
 
                     if (!availableTile1.IsEmpty || !availableTile2.IsEmpty) currentSeconds = rootGenerationSpeed;
+
+                    GenerateNewNextRootPart();
                 }
                 else
                 {
