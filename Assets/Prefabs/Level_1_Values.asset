@@ -18,5 +18,7 @@ MonoBehaviour:
   initNutrition: 3
   rootGenerationSpeed: 5
   audioClip: {fileID: 8300000, guid: 5059b08e7a889be44acfb99dcad4a031, type: 3}
-  maxResources: 20
-  minResources: 10
+  maxGoodResources: 3
+  minGoodResources: 1
+  maxBadResources: 1
+  minBadResources: 1

@@ -11,8 +11,10 @@ namespace TheirRoot
         public float initNutrition;
         public int rootGenerationSpeed;
         public AudioClip audioClip;
-        public int maxResources;
-        public int minResources;
+        public int maxGoodResources;
+        public int minGoodResources;
+        public int maxBadResources;
+        public int minBadResources;
         public IAnimal animal;
     }
 }
